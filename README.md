@@ -22,31 +22,31 @@ Isso pode acabar gerando alguns problemas como:
 - Conflitos de merge;
 
 Ilustraremos melhor esse conceito com um exemplo. Tomemos como exemplo a classe a seguir utilizada para análise de reviews de produtos.
-```class review_analysis:
+```class Review_Analysis:
          def __init__(self,data):
               self.data = data
          
          
-         def Pre_Process(self):
+         def pre_process(self):
                   //realiza o pré-processamento dos dados
          
          
-         def Sentiment_Analysis(self):
+         def sentiment_analysis(self):
                   //código que faz a análise de sentimentos das reviews
                   
          
-         def Visualization(self):
+         def visualization(self):
                   //código que mostra os resultados obtidos
                   
                   
-         def SaveToFile(self, filename):
+         def save_to_file(self, filename):
                  //Cria um arquivo e salva os dados
   ```             
 Nossa classe então, além de ter os dados principais, contém 4 métodos:
-- Pre_Process
-- Sentiment_Analysis
-- Visualization
-- SaveToFile
+- pre_process
+- sentiment_analysis
+- visualization
+- save_to_file
 Essa classe viola o princípio da responsabilidade única visto que, caso seja necessário mudar a forma como fazemos a visualização, teriamos que mudar a classe. Nossa classe deve ter somente um motivo para mudar, e nesse caso o motivo deve ser a análise de sentimentos.
 
 Pior ainda, os métodos presentes provavelmente seriam de responsabilidade de grupos diferentes; o pré-processamento poderia ser de responsabilidade de uma equipe de engenharia de dados, a análise de sentimentos por uma equipe de ciência de dados, a visualização por uma equipe de front end e a lógica de persistência, que nesse caso é somente salvar para um arquivo mas poderia ser salvar num banco de dados, poderia ser responsabilidade de uma equipe de infra.
@@ -77,7 +77,7 @@ Podemos resolver isso separando a classe em classes mais coesas. Criamos então 
 Deixando assim a classe review_analysis somente com a tarefa de fazer a analise de sentimentos dos dados e, assim, cada classe tem somente uma responsabilidade no programa.
 
 
-###Links
+### Links
 Alguns links que ajudaram na pesquisa deste trabalho e que ficam como recomendação para conhecer melhor sobre o princípio de responsabilidade única e outros dos princípios **SOLID.**
 
 - <https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/>
