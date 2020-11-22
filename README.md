@@ -54,21 +54,24 @@ Pior ainda, os métodos presentes provavelmente seriam de responsabilidade de gr
 
 Podemos resolver isso separando a classe em classes mais coesas. Criamos então outras 3 classes que lidam exclusivamente com a visualização, o pré-processamento e com a lógica de persistência. Preferencialmente, essas classes novas devem também estar em outro arquivo, assim, caso a pessoa ou grupo de pessoas responsavel por pela parte de código que deve ser mudada não correm o risco de alterar alguma outra parte do programa.
 
-```class Pre_Process:
+```
+class Pre_Process:
           def __init__(self,data):
                   self.data = data
           
           def process(self):
                   //realiza o pré processamento dos dados
 ```
-```class Visualization:
+```
+class Visualization:
           def __init__(self, data):
                   self.data = data
           
           def show(self):
                   //mostra a visualização dos dados
  ```
- ```class SaveToFile:
+ ```
+ class SaveToFile:
           def __init__(self, data):
                   self.data = data
                   
