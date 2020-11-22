@@ -47,6 +47,7 @@ Nossa classe então, além de ter os dados principais, contém 4 métodos:
 - sentiment_analysis
 - visualization
 - save_to_file
+
 Essa classe viola o princípio da responsabilidade única visto que, caso seja necessário mudar a forma como fazemos a visualização, teriamos que mudar a classe. Nossa classe deve ter somente um motivo para mudar, e nesse caso o motivo deve ser a análise de sentimentos.
 
 Pior ainda, os métodos presentes provavelmente seriam de responsabilidade de grupos diferentes; o pré-processamento poderia ser de responsabilidade de uma equipe de engenharia de dados, a análise de sentimentos por uma equipe de ciência de dados, a visualização por uma equipe de front end e a lógica de persistência, que nesse caso é somente salvar para um arquivo mas poderia ser salvar num banco de dados, poderia ser responsabilidade de uma equipe de infra.
