@@ -2,7 +2,7 @@
 
 ##### Autor: Martin Heckmann
 
-Apresentados por [Robert C. Martin](https://en.wikipedia.org/wiki/Robert_C._Martin) em 2000, os princípios de design SOLID para programação orientada a objetos tem o objetivo de tornar o design de software mais compreensíveis, flexíveis e com uma manutenção mais simples. Neste trabalho apresentaremos o primeiro destes princípios, o SRP-Single Responsability Principle(Princípio da Responsabilidade Única).
+Apresentados por [Robert C. Martin](https://en.wikipedia.org/wiki/Robert_C._Martin) em 2000, os princípios de design **SOLID** para programação orientada a objetos tem o objetivo de tornar o design de software mais compreensíveis, flexíveis e com uma manutenção mais simples. Neste trabalho apresentaremos o primeiro destes princípios, o SRP-Single Responsability Principle (Princípio da Responsabilidade Única).
 
 ## Single Responsability Principle
 O princípio de responsabilidade única diz que: 
